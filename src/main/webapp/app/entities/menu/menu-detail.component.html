@@ -1,0 +1,55 @@
+
+<div *ngIf="menu">
+    <h2><span jhiTranslate="adxMgrApp.menu.detail.title">Menu</span> {{menu.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="adxMgrApp.menu.name">Name</span></dt>
+        <dd>
+            <span>{{menu.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="adxMgrApp.menu.href">Href</span></dt>
+        <dd>
+            <span>{{menu.href}}</span>
+        </dd>
+        <dt><span jhiTranslate="adxMgrApp.menu.icon">Icon</span></dt>
+        <dd>
+            <span>{{menu.icon}}</span>
+        </dd>
+        <dt><span jhiTranslate="adxMgrApp.menu.target">Target</span></dt>
+        <dd>
+            <span>{{menu.target}}</span>
+        </dd>
+        <dt><span jhiTranslate="adxMgrApp.menu.isShow">Is Show</span></dt>
+        <dd>
+            <span>{{menu.isShow}}</span>
+        </dd>
+        <dt><span jhiTranslate="adxMgrApp.menu.permission">Permission</span></dt>
+        <dd>
+            <span>{{menu.permission}}</span>
+        </dd>
+        <dt><span jhiTranslate="adxMgrApp.menu.sort">Sort</span></dt>
+        <dd>
+            <span>{{menu.sort}}</span>
+        </dd>
+        <dt><span jhiTranslate="adxMgrApp.menu.menu">Menu</span></dt>
+        <dd>
+            <div *ngIf="menu.menuId">
+                <a [routerLink]="['/menu', menu.menuId]">{{menu.menuId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'menu/'+ menu.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

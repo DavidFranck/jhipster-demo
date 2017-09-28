@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Authority.
+    -->
+    <changeSet id="20170928030957-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="authorities_id"
+                                 baseTableName="sys_authority_menu"
+                                 constraintName="fk_authority_menu_authorities_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sys_authority"/>
+        <addForeignKeyConstraint baseColumnNames="menus_id"
+                                 baseTableName="sys_authority_menu"
+                                 constraintName="fk_authority_menu_menus_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sys_menu"/>
+
+    </changeSet>
+</databaseChangeLog>

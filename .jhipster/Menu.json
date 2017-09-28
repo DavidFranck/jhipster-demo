@@ -1,0 +1,60 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "menu",
+            "otherEntityName": "menu",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "children",
+            "otherEntityName": "menu",
+            "otherEntityRelationshipName": "menu"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "authority",
+            "otherEntityName": "authority",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "menu"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "href",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "icon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "target",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isShow",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "permission",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sort",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170928030956",
+    "javadoc": "The Resource entity.",
+    "entityTableName": "menu",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass"
+}

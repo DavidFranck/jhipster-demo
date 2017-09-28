@@ -1,0 +1,10 @@
+${AnsiColor.BLUE}  █████╗ ██████╗ ██╗  ██╗    ███╗   ███╗ ██████╗ ██████╗
+${AnsiColor.BLUE} ██╔══██╗██╔══██╗╚██╗██╔╝    ████╗ ████║██╔════╝ ██╔══██╗
+${AnsiColor.BLUE} ███████║██║  ██║ ╚███╔╝     ██╔████╔██║██║  ███╗██████╔╝
+${AnsiColor.BLUE} ██╔══██║██║  ██║ ██╔██╗     ██║╚██╔╝██║██║   ██║██╔══██╗
+${AnsiColor.BLUE} ██║  ██║██████╔╝██╔╝ ██╗    ██║ ╚═╝ ██║╚██████╔╝██║  ██║
+${AnsiColor.BLUE} ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝
+
+
+${AnsiColor.BRIGHT_BLUE}:: adx-mgr 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: http://www.jhipster.tech ::${AnsiColor.DEFAULT}
