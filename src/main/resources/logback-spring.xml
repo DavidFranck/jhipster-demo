@@ -22,7 +22,7 @@
     </appender>
 -->
 
-    <logger name="com.mex.adx.mgr" level="#logback.loglevel#"/>
+    <logger name="com.mex.gt.mgr" level="#logback.loglevel#"/>
 
     <logger name="io.github.jhipster" level="#logback.loglevel#"/>
 

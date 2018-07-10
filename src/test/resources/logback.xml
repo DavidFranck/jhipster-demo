@@ -3,7 +3,7 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="com.mex.adx.mgr" level="INFO"/>
+    <logger name="com.mex.gt.mgr" level="INFO"/>
 
     <logger name="io.github.jhipster" level="WARN"/>
 

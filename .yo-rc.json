@@ -1,13 +1,13 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.mex.adx.mgr",
+      "packageName": "com.mex.gt.mgr",
       "nativeLanguage": "en"
     },
     "jhipsterVersion": "4.8.2",
-    "baseName": "adx-mgr",
-    "packageName": "com.mex.adx.mgr",
-    "packageFolder": "com/mex/adx/mgr",
+    "baseName": "gt-mgr",
+    "packageName": "com.mex.gt.mgr",
+    "packageFolder": "com/mex/gt/mgr",
     "serverPort": "8080",
     "authenticationType": "jwt",
     "hibernateCache": "hazelcast",

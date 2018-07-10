@@ -16,14 +16,14 @@
 
 spring:
     application:
-        name: adx-mgr
+        name: gt-mgr
     jackson:
         serialization.write_dates_as_timestamps: false
     cache:
         type: none
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:adx-mgr;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:gt-mgr;DB_CLOSE_DELAY=-1
         name:
         username:
         password:

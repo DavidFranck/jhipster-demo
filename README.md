@@ -107,7 +107,7 @@ Refer to [Doing API-First development][] for more details.
 
 ## Building for production
 
-To optimize the adx-mgr application for production, run:
+To optimize the gt-mgr application for production, run:
 
     ./mvnw -Pprod clean package
 

@@ -1,7 +1,7 @@
 {
-  "name": "adx-mgr",
+  "name": "gt-mgr",
   "version": "0.0.0",
-  "description": "Description for adx-mgr",
+  "description": "Description for gt-mgr",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

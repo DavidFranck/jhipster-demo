@@ -1,10 +1,9 @@
-${AnsiColor.BLUE}  █████╗ ██████╗ ██╗  ██╗    ███╗   ███╗ ██████╗ ██████╗
-${AnsiColor.BLUE} ██╔══██╗██╔══██╗╚██╗██╔╝    ████╗ ████║██╔════╝ ██╔══██╗
-${AnsiColor.BLUE} ███████║██║  ██║ ╚███╔╝     ██╔████╔██║██║  ███╗██████╔╝
-${AnsiColor.BLUE} ██╔══██║██║  ██║ ██╔██╗     ██║╚██╔╝██║██║   ██║██╔══██╗
-${AnsiColor.BLUE} ██║  ██║██████╔╝██╔╝ ██╗    ██║ ╚═╝ ██║╚██████╔╝██║  ██║
-${AnsiColor.BLUE} ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝
+${AnsiColor.BLUE}    ____       _     _              _____           __  __ _
+${AnsiColor.BLUE}   / ___| ___ | | __| | ___ _ __   |_   _| __ __ _ / _|/ _(_) ___
+${AnsiColor.BLUE}  | |  _ / _ \| |/ _` |/ _ \ '_ \    | || '__/ _` | |_| |_| |/ __|
+${AnsiColor.BLUE}  | |_| | (_) | | (_| |  __/ | | |   | || | | (_| |  _|  _| | (__
+${AnsiColor.BLUE}   \____|\___/|_|\__,_|\___|_| |_|   |_||_|  \__,_|_| |_| |_|\___|
 
 
-${AnsiColor.BRIGHT_BLUE}:: adx-mgr 🤓  :: Running Spring Boot ${spring-boot.version} ::
-:: http://www.jhipster.tech ::${AnsiColor.DEFAULT}
+${AnsiColor.BRIGHT_BLUE}欢迎使用 Golden Traffic - Powered By MEX
+Running Spring Boot ${spring-boot.version}
