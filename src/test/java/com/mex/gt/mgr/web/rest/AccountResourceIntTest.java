@@ -1,6 +1,6 @@
 package com.mex.gt.mgr.web.rest;
 
-import com.mex.gt.mgr.Application;
+import com.mex.gt.mgr.GtMgrApp;
 import com.mex.gt.mgr.domain.Authority;
 import com.mex.gt.mgr.domain.User;
 import com.mex.gt.mgr.repository.AuthorityRepository;
@@ -47,7 +47,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AccountResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = GtMgrApp.class)
 public class AccountResourceIntTest {
 
     @Autowired

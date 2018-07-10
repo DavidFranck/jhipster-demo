@@ -1,6 +1,6 @@
 package com.mex.gt.mgr.service;
 
-import com.mex.gt.mgr.Application;
+import com.mex.gt.mgr.GtMgrApp;
 import com.mex.gt.mgr.domain.User;
 import com.mex.gt.mgr.config.Constants;
 import com.mex.gt.mgr.repository.UserRepository;
@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.*;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = GtMgrApp.class)
 @Transactional
 public class UserServiceIntTest {
 

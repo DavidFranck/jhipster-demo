@@ -1,6 +1,6 @@
 package com.mex.gt.mgr.repository;
 
-import com.mex.gt.mgr.Application;
+import com.mex.gt.mgr.GtMgrApp;
 import com.mex.gt.mgr.config.Constants;
 import com.mex.gt.mgr.config.audit.AuditEventConverter;
 import com.mex.gt.mgr.domain.PersistentAuditEvent;
@@ -31,7 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = GtMgrApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 

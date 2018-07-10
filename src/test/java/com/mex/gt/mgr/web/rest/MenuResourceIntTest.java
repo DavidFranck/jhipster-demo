@@ -1,6 +1,6 @@
 package com.mex.gt.mgr.web.rest;
 
-import com.mex.gt.mgr.Application;
+import com.mex.gt.mgr.GtMgrApp;
 
 import com.mex.gt.mgr.domain.Menu;
 import com.mex.gt.mgr.repository.MenuRepository;
@@ -38,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see MenuResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = GtMgrApp.class)
 public class MenuResourceIntTest {
 
     private static final String DEFAULT_NAME = "AAAAAAAAAA";

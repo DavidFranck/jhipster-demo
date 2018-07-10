@@ -1,6 +1,6 @@
 package com.mex.gt.mgr.web.rest;
 
-import com.mex.gt.mgr.Application;
+import com.mex.gt.mgr.GtMgrApp;
 import com.mex.gt.mgr.config.audit.AuditEventConverter;
 import com.mex.gt.mgr.domain.PersistentAuditEvent;
 import com.mex.gt.mgr.repository.PersistenceAuditEventRepository;
@@ -32,7 +32,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AuditResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = GtMgrApp.class)
 @Transactional
 public class AuditResourceIntTest {
 

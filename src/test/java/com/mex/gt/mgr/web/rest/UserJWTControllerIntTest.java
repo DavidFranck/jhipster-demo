@@ -1,6 +1,6 @@
 package com.mex.gt.mgr.web.rest;
 
-import com.mex.gt.mgr.Application;
+import com.mex.gt.mgr.GtMgrApp;
 import com.mex.gt.mgr.domain.User;
 import com.mex.gt.mgr.repository.UserRepository;
 import com.mex.gt.mgr.security.jwt.TokenProvider;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see UserJWTController
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = GtMgrApp.class)
 public class UserJWTControllerIntTest {
 
     @Autowired
