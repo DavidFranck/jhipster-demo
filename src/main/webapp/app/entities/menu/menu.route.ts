@@ -34,7 +34,7 @@ export const menuRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.menu.home.title'
+            pageTitle: 'gtMgrApp.menu.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -42,7 +42,7 @@ export const menuRoute: Routes = [
         component: MenuDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.menu.home.title'
+            pageTitle: 'gtMgrApp.menu.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -54,7 +54,7 @@ export const menuPopupRoute: Routes = [
         component: MenuPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.menu.home.title'
+            pageTitle: 'gtMgrApp.menu.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -64,7 +64,7 @@ export const menuPopupRoute: Routes = [
         component: MenuPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.menu.home.title'
+            pageTitle: 'gtMgrApp.menu.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -74,7 +74,7 @@ export const menuPopupRoute: Routes = [
         component: MenuDeletePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.menu.home.title'
+            pageTitle: 'gtMgrApp.menu.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

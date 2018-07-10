@@ -5,7 +5,7 @@ import { DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { JhiDateUtils, JhiDataUtils, JhiEventManager } from 'ng-jhipster';
-import { AdxMgrTestModule } from '../../../test.module';
+import { GtMgrTestModule } from '../../../test.module';
 import { MockActivatedRoute } from '../../../helpers/mock-route.service';
 import { AuthorityDetailComponent } from '../../../../../../main/webapp/app/entities/authority/authority-detail.component';
 import { AuthorityService } from '../../../../../../main/webapp/app/entities/authority/authority.service';
@@ -20,7 +20,7 @@ describe('Component Tests', () => {
 
         beforeEach(async(() => {
             TestBed.configureTestingModule({
-                imports: [AdxMgrTestModule],
+                imports: [GtMgrTestModule],
                 declarations: [AuthorityDetailComponent],
                 providers: [
                     JhiDateUtils,

@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="adxMgrApp.menu.home.title">Menus</span>
+        <span jhiTranslate="gtMgrApp.menu.home.title">Menus</span>
         <button class="btn btn-primary float-right jh-create-entity create-menu" [routerLink]="['/', { outlets: { popup: ['menu-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="adxMgrApp.menu.home.createLabel">
+            <span  jhiTranslate="gtMgrApp.menu.home.createLabel">
             Create new Menu
             </span>
         </button>
@@ -17,14 +17,14 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="name"><span jhiTranslate="adxMgrApp.menu.name">Name</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="href"><span jhiTranslate="adxMgrApp.menu.href">Href</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="icon"><span jhiTranslate="adxMgrApp.menu.icon">Icon</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="target"><span jhiTranslate="adxMgrApp.menu.target">Target</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="isShow"><span jhiTranslate="adxMgrApp.menu.isShow">Is Show</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="permission"><span jhiTranslate="adxMgrApp.menu.permission">Permission</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="sort"><span jhiTranslate="adxMgrApp.menu.sort">Sort</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="menuId"><span jhiTranslate="adxMgrApp.menu.menu">Menu</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="name"><span jhiTranslate="gtMgrApp.menu.name">Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="href"><span jhiTranslate="gtMgrApp.menu.href">Href</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="icon"><span jhiTranslate="gtMgrApp.menu.icon">Icon</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="target"><span jhiTranslate="gtMgrApp.menu.target">Target</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="isShow"><span jhiTranslate="gtMgrApp.menu.isShow">Is Show</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="permission"><span jhiTranslate="gtMgrApp.menu.permission">Permission</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="sort"><span jhiTranslate="gtMgrApp.menu.sort">Sort</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="menuId"><span jhiTranslate="gtMgrApp.menu.menu">Menu</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

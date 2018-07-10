@@ -2,7 +2,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import {
-    AdxMgrSharedLibsModule,
+    GtMgrSharedLibsModule,
     JhiLanguageHelper,
     FindLanguageFromKeyPipe,
     JhiAlertComponent,
@@ -11,7 +11,7 @@ import {
 
 @NgModule({
     imports: [
-        AdxMgrSharedLibsModule
+        GtMgrSharedLibsModule
     ],
     declarations: [
         FindLanguageFromKeyPipe,
@@ -27,10 +27,10 @@ import {
         },
     ],
     exports: [
-        AdxMgrSharedLibsModule,
+        GtMgrSharedLibsModule,
         FindLanguageFromKeyPipe,
         JhiAlertComponent,
         JhiAlertErrorComponent
     ]
 })
-export class AdxMgrSharedCommonModule {}
+export class GtMgrSharedCommonModule {}

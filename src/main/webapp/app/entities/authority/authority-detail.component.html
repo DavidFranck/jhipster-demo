@@ -1,14 +1,14 @@
 
 <div *ngIf="authority">
-    <h2><span jhiTranslate="adxMgrApp.authority.detail.title">Authority</span> {{authority.id}}</h2>
+    <h2><span jhiTranslate="gtMgrApp.authority.detail.title">Authority</span> {{authority.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="adxMgrApp.authority.name">Name</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.authority.name">Name</span></dt>
         <dd>
             <span>{{authority.name}}</span>
         </dd>
-        <dt><span jhiTranslate="adxMgrApp.authority.menu">Menu</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.authority.menu">Menu</span></dt>
         <dd>
             <span *ngFor="let menu of authority.menus; let last = last">
                 <a [routerLink]="['/menu', menu?.id ]">{{menu.id}}</a>{{last ? '' : ', '}}

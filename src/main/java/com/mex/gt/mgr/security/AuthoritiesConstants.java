@@ -13,7 +13,7 @@ public final class AuthoritiesConstants {
 
     public static final String SSP = "ROLE_SSP"; //ssp
 
-    public static final String ADX = "ROLE_ADX"; //adx
+    public static final String ADX = "ROLE_ADX"; //gt
 
 //    public static final String DSP = "ROLE_DSP";
 

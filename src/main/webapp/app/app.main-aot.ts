@@ -1,9 +1,9 @@
 import { platformBrowser } from '@angular/platform-browser';
 import { ProdConfig } from './blocks/config/prod.config';
-import { AdxMgrAppModuleNgFactory } from '../../../../target/aot/src/main/webapp/app/app.module.ngfactory';
+import { GtMgrAppModuleNgFactory } from '../../../../target/aot/src/main/webapp/app/app.module.ngfactory';
 
 ProdConfig();
 
-platformBrowser().bootstrapModuleFactory(AdxMgrAppModuleNgFactory)
+platformBrowser().bootstrapModuleFactory(GtMgrAppModuleNgFactory)
 .then((success) => console.log(`Application started`))
 .catch((err) => console.error(err));

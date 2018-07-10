@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
-import { AdxMgrSharedModule, UserRouteAccessService } from './shared';
-import { AdxMgrHomeModule } from './home/home.module';
-import { AdxMgrAdminModule } from './admin/admin.module';
-import { AdxMgrAccountModule } from './account/account.module';
-import { AdxMgrEntityModule } from './entities/entity.module';
+import { GtMgrSharedModule, UserRouteAccessService } from './shared';
+import { GtMgrHomeModule } from './home/home.module';
+import { GtMgrAdminModule } from './admin/admin.module';
+import { GtMgrAccountModule } from './account/account.module';
+import { GtMgrEntityModule } from './entities/entity.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -31,11 +31,11 @@ import {
         BrowserModule,
         LayoutRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
-        AdxMgrSharedModule,
-        AdxMgrHomeModule,
-        AdxMgrAdminModule,
-        AdxMgrAccountModule,
-        AdxMgrEntityModule,
+        GtMgrSharedModule,
+        GtMgrHomeModule,
+        GtMgrAdminModule,
+        GtMgrAccountModule,
+        GtMgrEntityModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [
@@ -54,4 +54,4 @@ import {
     ],
     bootstrap: [ JhiMainComponent ]
 })
-export class AdxMgrAppModule {}
+export class GtMgrAppModule {}

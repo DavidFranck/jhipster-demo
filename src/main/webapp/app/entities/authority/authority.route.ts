@@ -34,7 +34,7 @@ export const authorityRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.authority.home.title'
+            pageTitle: 'gtMgrApp.authority.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -42,7 +42,7 @@ export const authorityRoute: Routes = [
         component: AuthorityDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.authority.home.title'
+            pageTitle: 'gtMgrApp.authority.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -54,7 +54,7 @@ export const authorityPopupRoute: Routes = [
         component: AuthorityPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.authority.home.title'
+            pageTitle: 'gtMgrApp.authority.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -64,7 +64,7 @@ export const authorityPopupRoute: Routes = [
         component: AuthorityPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.authority.home.title'
+            pageTitle: 'gtMgrApp.authority.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -74,7 +74,7 @@ export const authorityPopupRoute: Routes = [
         component: AuthorityDeletePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'adxMgrApp.authority.home.title'
+            pageTitle: 'gtMgrApp.authority.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

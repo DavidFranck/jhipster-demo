@@ -1,38 +1,38 @@
 
 <div *ngIf="menu">
-    <h2><span jhiTranslate="adxMgrApp.menu.detail.title">Menu</span> {{menu.id}}</h2>
+    <h2><span jhiTranslate="gtMgrApp.menu.detail.title">Menu</span> {{menu.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="adxMgrApp.menu.name">Name</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.menu.name">Name</span></dt>
         <dd>
             <span>{{menu.name}}</span>
         </dd>
-        <dt><span jhiTranslate="adxMgrApp.menu.href">Href</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.menu.href">Href</span></dt>
         <dd>
             <span>{{menu.href}}</span>
         </dd>
-        <dt><span jhiTranslate="adxMgrApp.menu.icon">Icon</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.menu.icon">Icon</span></dt>
         <dd>
             <span>{{menu.icon}}</span>
         </dd>
-        <dt><span jhiTranslate="adxMgrApp.menu.target">Target</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.menu.target">Target</span></dt>
         <dd>
             <span>{{menu.target}}</span>
         </dd>
-        <dt><span jhiTranslate="adxMgrApp.menu.isShow">Is Show</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.menu.isShow">Is Show</span></dt>
         <dd>
             <span>{{menu.isShow}}</span>
         </dd>
-        <dt><span jhiTranslate="adxMgrApp.menu.permission">Permission</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.menu.permission">Permission</span></dt>
         <dd>
             <span>{{menu.permission}}</span>
         </dd>
-        <dt><span jhiTranslate="adxMgrApp.menu.sort">Sort</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.menu.sort">Sort</span></dt>
         <dd>
             <span>{{menu.sort}}</span>
         </dd>
-        <dt><span jhiTranslate="adxMgrApp.menu.menu">Menu</span></dt>
+        <dt><span jhiTranslate="gtMgrApp.menu.menu">Menu</span></dt>
         <dd>
             <div *ngIf="menu.menuId">
                 <a [routerLink]="['/menu', menu.menuId]">{{menu.menuId}}</a>

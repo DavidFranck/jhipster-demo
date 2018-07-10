@@ -1,6 +1,6 @@
 {
-  "name": "AdxMgr",
-  "short_name": "AdxMgr",
+  "name": "GtMgr",
+  "short_name": "GtMgr",
   "icons": [
       {
           "src": "./content/images/logo-jhipster.png",

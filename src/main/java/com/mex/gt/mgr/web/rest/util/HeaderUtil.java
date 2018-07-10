@@ -10,15 +10,15 @@ public final class HeaderUtil {
 
     private static final Logger log = LoggerFactory.getLogger(HeaderUtil.class);
 
-    private static final String APPLICATION_NAME = "adxMgrApp";
+    private static final String APPLICATION_NAME = "gtMgrApp";
 
     private HeaderUtil() {
     }
 
     public static HttpHeaders createAlert(String message, String param) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-adxMgrApp-alert", message);
-        headers.add("X-adxMgrApp-params", param);
+        headers.add("X-gtMgrApp-alert", message);
+        headers.add("X-gtMgrApp-params", param);
         return headers;
     }
 
@@ -37,8 +37,8 @@ public final class HeaderUtil {
     public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
         log.error("Entity processing failed, {}", defaultMessage);
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-adxMgrApp-error", "error." + errorKey);
-        headers.add("X-adxMgrApp-params", entityName);
+        headers.add("X-gtMgrApp-error", "error." + errorKey);
+        headers.add("X-gtMgrApp-params", entityName);
         return headers;
     }
 }

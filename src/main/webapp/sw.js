@@ -1,5 +1,5 @@
-var dataCacheName = 'AdxMgr-v1';
-var cacheName = 'AdxMgr-1';
+var dataCacheName = 'GtMgr-v1';
+var cacheName = 'GtMgr-1';
 var filesToCache = [
     '/',
     '/index.html'

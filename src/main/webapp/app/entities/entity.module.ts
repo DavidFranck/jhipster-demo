@@ -1,13 +1,13 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { AdxMgrMenuModule } from './menu/menu.module';
-import { AdxMgrAuthorityModule } from './authority/authority.module';
+import { GtMgrMenuModule } from './menu/menu.module';
+import { GtMgrAuthorityModule } from './authority/authority.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
     imports: [
-        AdxMgrMenuModule,
-        AdxMgrAuthorityModule,
+        GtMgrMenuModule,
+        GtMgrAuthorityModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],
@@ -15,4 +15,4 @@ import { AdxMgrAuthorityModule } from './authority/authority.module';
     providers: [],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AdxMgrEntityModule {}
+export class GtMgrEntityModule {}
