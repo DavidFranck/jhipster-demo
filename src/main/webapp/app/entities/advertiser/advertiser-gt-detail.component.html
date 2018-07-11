@@ -1,0 +1,137 @@
+
+<div *ngIf="advertiser">
+    <h2><span jhiTranslate="gtMgrApp.advertiser.detail.title">Advertiser</span> {{advertiser.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gtMgrApp.advertiser.name">Name</span></dt>
+        <dd>
+            <span>{{advertiser.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.contacts">Contacts</span></dt>
+        <dd>
+            <span>{{advertiser.contacts}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.industryLevel1">Industry Level 1</span></dt>
+        <dd>
+            <span>{{advertiser.industryLevel1}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.industryLevel2">Industry Level 2</span></dt>
+        <dd>
+            <span>{{advertiser.industryLevel2}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.website">Website</span></dt>
+        <dd>
+            <span>{{advertiser.website}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.address">Address</span></dt>
+        <dd>
+            <span>{{advertiser.address}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.checkStatus">Check Status</span></dt>
+        <dd>
+            <span>{{advertiser.checkStatus}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.waxUid">Wax Uid</span></dt>
+        <dd>
+            <span>{{advertiser.waxUid}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.orgCode">Org Code</span></dt>
+        <dd>
+            <span>{{advertiser.orgCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.orgCodeCertificate">Org Code Certificate</span></dt>
+        <dd>
+            <span>{{advertiser.orgCodeCertificate}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.businessLicense">Business License</span></dt>
+        <dd>
+            <span>{{advertiser.businessLicense}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.idCard">Id Card</span></dt>
+        <dd>
+            <span>{{advertiser.idCard}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.icp">Icp</span></dt>
+        <dd>
+            <span>{{advertiser.icp}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.taxesCertificate">Taxes Certificate</span></dt>
+        <dd>
+            <span>{{advertiser.taxesCertificate}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.networkBussinessCertificate">Network Bussiness Certificate</span></dt>
+        <dd>
+            <span>{{advertiser.networkBussinessCertificate}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.healthOrgCertificate">Health Org Certificate</span></dt>
+        <dd>
+            <span>{{advertiser.healthOrgCertificate}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.healthAdFile">Health Ad File</span></dt>
+        <dd>
+            <span>{{advertiser.healthAdFile}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.gameAuthCertificate">Game Auth Certificate</span></dt>
+        <dd>
+            <span>{{advertiser.gameAuthCertificate}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.gameVersionFile">Game Version File</span></dt>
+        <dd>
+            <span>{{advertiser.gameVersionFile}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.celebrityEndorsement">Celebrity Endorsement</span></dt>
+        <dd>
+            <span>{{advertiser.celebrityEndorsement}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.taxRegistration">Tax Registration</span></dt>
+        <dd>
+            <span>{{advertiser.taxRegistration}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.administrativ">Administrativ</span></dt>
+        <dd>
+            <span>{{advertiser.administrativ}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.authorization">Authorization</span></dt>
+        <dd>
+            <span>{{advertiser.authorization}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.remarks">Remarks</span></dt>
+        <dd>
+            <span>{{advertiser.remarks}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{advertiser.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.updateDate">Update Date</span></dt>
+        <dd>
+            <span>{{advertiser.updateDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.createBy">Create By</span></dt>
+        <dd>
+            <span>{{advertiser.createBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{advertiser.updateBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.advertiser.delFlag">Del Flag</span></dt>
+        <dd>
+            <span jhiTranslate="{{'gtMgrApp.DelFlag.' + advertiser.delFlag}}">{{advertiser.delFlag}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'advertiser-gt/'+ advertiser.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

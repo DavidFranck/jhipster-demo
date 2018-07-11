@@ -9,6 +9,8 @@
                 "main": "Entities",
                 "menu": "Menu",
                 "authority": "Authority",
+                "advertiserGt": "Advertiser",
+                "productGt": "Product",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

@@ -1,0 +1,49 @@
+{
+    "gtMgrApp": {
+        "advertiser" : {
+            "home": {
+                "title": "Advertisers",
+                "createLabel": "Create a new Advertiser",
+                "createOrEditLabel": "Create or edit a Advertiser"
+            },
+            "created": "A new Advertiser is created with identifier {{ param }}",
+            "updated": "A Advertiser is updated with identifier {{ param }}",
+            "deleted": "A Advertiser is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Advertiser {{ id }}?"
+            },
+            "detail": {
+                "title": "Advertiser"
+            },
+            "name": "Name",
+            "contacts": "Contacts",
+            "industryLevel1": "Industry Level 1",
+            "industryLevel2": "Industry Level 2",
+            "website": "Website",
+            "address": "Address",
+            "checkStatus": "Check Status",
+            "waxUid": "Wax Uid",
+            "orgCode": "Org Code",
+            "orgCodeCertificate": "Org Code Certificate",
+            "businessLicense": "Business License",
+            "idCard": "Id Card",
+            "icp": "Icp",
+            "taxesCertificate": "Taxes Certificate",
+            "networkBussinessCertificate": "Network Bussiness Certificate",
+            "healthOrgCertificate": "Health Org Certificate",
+            "healthAdFile": "Health Ad File",
+            "gameAuthCertificate": "Game Auth Certificate",
+            "gameVersionFile": "Game Version File",
+            "celebrityEndorsement": "Celebrity Endorsement",
+            "taxRegistration": "Tax Registration",
+            "administrativ": "Administrativ",
+            "authorization": "Authorization",
+            "remarks": "Remarks",
+            "createDate": "Create Date",
+            "updateDate": "Update Date",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "delFlag": "Del Flag"
+        }
+    }
+}

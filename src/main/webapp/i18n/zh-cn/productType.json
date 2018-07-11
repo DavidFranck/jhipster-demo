@@ -1,0 +1,8 @@
+{
+    "gtMgrApp": {
+        "ProductType" : {
+            "null": "",
+            "APP_DOWNLOAD": "APP_DOWNLOAD"
+        }
+    }
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Advertiser.
+    -->
+    <changeSet id="20180711053450-1" author="jhipster">
+        <createTable tableName="t_advertiser">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="contacts" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="industry_level_1" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="industry_level_2" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="website" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="address" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="check_status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="wax_uid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="org_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="org_code_certificate" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="business_license" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_card" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="icp" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="taxes_certificate" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="network_bussiness_certificate" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="health_org_certificate" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="health_ad_file" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="game_auth_certificate" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="game_version_file" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="celebrity_endorsement" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tax_registration" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="administrativ" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="jhi_authorization" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="remarks" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="create_date" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="update_date" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="create_by" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="update_by" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="del_flag" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="t_advertiser" columnName="create_date" columnDataType="datetime"/>
+        <dropDefaultValue tableName="t_advertiser" columnName="update_date" columnDataType="datetime"/>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

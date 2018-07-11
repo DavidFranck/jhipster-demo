@@ -1,0 +1,9 @@
+{
+    "gtMgrApp": {
+        "Os" : {
+            "null": "",
+            "IOS": "IOS",
+            "ANDROID": "ANDROID"
+        }
+    }
+}

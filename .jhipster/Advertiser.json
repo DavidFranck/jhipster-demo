@@ -1,0 +1,171 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "contacts",
+            "javadoc": "名称",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "industryLevel1",
+            "javadoc": "联系人",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "industryLevel2",
+            "javadoc": "广告主一级行业类型",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "website",
+            "javadoc": "广告主二级行业类型",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "address",
+            "javadoc": "公司网址",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "checkStatus",
+            "javadoc": "公司地址",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "waxUid",
+            "javadoc": "审核状态",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "orgCode",
+            "javadoc": "微博uid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "orgCodeCertificate",
+            "javadoc": "组织机构代码",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "businessLicense",
+            "javadoc": "组织机构代码证",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idCard",
+            "javadoc": "营业执照",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "icp",
+            "javadoc": "法人身份证",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "taxesCertificate",
+            "javadoc": "ICP备案",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "networkBussinessCertificate",
+            "javadoc": "完税证",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "healthOrgCertificate",
+            "javadoc": "网络文化经营许可证",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "healthAdFile",
+            "javadoc": "医疗机构执业许可证",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gameAuthCertificate",
+            "javadoc": "医疗广告审查证明",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gameVersionFile",
+            "javadoc": "游戏授权资质",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "celebrityEndorsement",
+            "javadoc": "游戏版号文件",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "taxRegistration",
+            "javadoc": "明星代言资质",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "administrativ",
+            "javadoc": "税务登记证",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "authorization",
+            "javadoc": "行政许可",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remarks",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createDate",
+            "javadoc": "备注",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateDate",
+            "javadoc": "创建时间",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createBy",
+            "javadoc": "创建时间",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "updateBy",
+            "javadoc": "创建者",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "delFlag",
+            "javadoc": "更新者",
+            "fieldType": "DelFlag",
+            "fieldValues": "ON,OFF"
+        }
+    ],
+    "changelogDate": "20180711053450",
+    "entityTableName": "t_advertiser",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "angularJSSuffix": "gt"
+}

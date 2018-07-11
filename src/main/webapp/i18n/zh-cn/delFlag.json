@@ -1,0 +1,9 @@
+{
+    "gtMgrApp": {
+        "DelFlag" : {
+            "null": "",
+            "ON": "ON",
+            "OFF": "OFF"
+        }
+    }
+}

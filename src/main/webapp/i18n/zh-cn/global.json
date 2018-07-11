@@ -9,6 +9,8 @@
                 "main": "数据",
                 "menu": "Menu",
                 "authority": "Authority",
+                "advertiserGt": "Advertiser",
+                "productGt": "Product",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

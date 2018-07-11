@@ -1,0 +1,81 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "previewUrl",
+            "javadoc": "产品名称",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "os",
+            "javadoc": "预览链接",
+            "fieldType": "Os",
+            "fieldValues": "IOS,ANDROID",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "type",
+            "javadoc": "平台",
+            "fieldType": "ProductType",
+            "fieldValues": "APP_DOWNLOAD",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "packetUrl",
+            "javadoc": "产品类型",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remarks",
+            "javadoc": "包地址",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createDate",
+            "javadoc": "备注",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateDate",
+            "javadoc": "创建时间",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createBy",
+            "javadoc": "创建时间",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "updateBy",
+            "javadoc": "创建者",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "delFlag",
+            "javadoc": "更新者",
+            "fieldType": "DelFlag",
+            "fieldValues": "ON,OFF"
+        }
+    ],
+    "changelogDate": "20180711053451",
+    "entityTableName": "t_product",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "angularJSSuffix": "gt"
+}

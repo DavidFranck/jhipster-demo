@@ -1,0 +1,120 @@
+<div>
+    <h2>
+        <span jhiTranslate="gtMgrApp.advertiser.home.title">Advertisers</span>
+        <button class="btn btn-primary float-right jh-create-entity create-advertiser-gt" [routerLink]="['/', { outlets: { popup: ['advertiser-gt-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="gtMgrApp.advertiser.home.createLabel">
+            Create new Advertiser
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="advertisers">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="name"><span jhiTranslate="gtMgrApp.advertiser.name">Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="contacts"><span jhiTranslate="gtMgrApp.advertiser.contacts">Contacts</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="industryLevel1"><span jhiTranslate="gtMgrApp.advertiser.industryLevel1">Industry Level 1</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="industryLevel2"><span jhiTranslate="gtMgrApp.advertiser.industryLevel2">Industry Level 2</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="website"><span jhiTranslate="gtMgrApp.advertiser.website">Website</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="address"><span jhiTranslate="gtMgrApp.advertiser.address">Address</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="checkStatus"><span jhiTranslate="gtMgrApp.advertiser.checkStatus">Check Status</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="waxUid"><span jhiTranslate="gtMgrApp.advertiser.waxUid">Wax Uid</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="orgCode"><span jhiTranslate="gtMgrApp.advertiser.orgCode">Org Code</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="orgCodeCertificate"><span jhiTranslate="gtMgrApp.advertiser.orgCodeCertificate">Org Code Certificate</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="businessLicense"><span jhiTranslate="gtMgrApp.advertiser.businessLicense">Business License</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="idCard"><span jhiTranslate="gtMgrApp.advertiser.idCard">Id Card</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="icp"><span jhiTranslate="gtMgrApp.advertiser.icp">Icp</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="taxesCertificate"><span jhiTranslate="gtMgrApp.advertiser.taxesCertificate">Taxes Certificate</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="networkBussinessCertificate"><span jhiTranslate="gtMgrApp.advertiser.networkBussinessCertificate">Network Bussiness Certificate</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="healthOrgCertificate"><span jhiTranslate="gtMgrApp.advertiser.healthOrgCertificate">Health Org Certificate</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="healthAdFile"><span jhiTranslate="gtMgrApp.advertiser.healthAdFile">Health Ad File</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="gameAuthCertificate"><span jhiTranslate="gtMgrApp.advertiser.gameAuthCertificate">Game Auth Certificate</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="gameVersionFile"><span jhiTranslate="gtMgrApp.advertiser.gameVersionFile">Game Version File</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="celebrityEndorsement"><span jhiTranslate="gtMgrApp.advertiser.celebrityEndorsement">Celebrity Endorsement</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="taxRegistration"><span jhiTranslate="gtMgrApp.advertiser.taxRegistration">Tax Registration</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="administrativ"><span jhiTranslate="gtMgrApp.advertiser.administrativ">Administrativ</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="authorization"><span jhiTranslate="gtMgrApp.advertiser.authorization">Authorization</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="remarks"><span jhiTranslate="gtMgrApp.advertiser.remarks">Remarks</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="createDate"><span jhiTranslate="gtMgrApp.advertiser.createDate">Create Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="updateDate"><span jhiTranslate="gtMgrApp.advertiser.updateDate">Update Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="createBy"><span jhiTranslate="gtMgrApp.advertiser.createBy">Create By</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="updateBy"><span jhiTranslate="gtMgrApp.advertiser.updateBy">Update By</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="delFlag"><span jhiTranslate="gtMgrApp.advertiser.delFlag">Del Flag</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let advertiser of advertisers ;trackBy: trackId">
+                <td><a [routerLink]="['../advertiser-gt', advertiser.id ]">{{advertiser.id}}</a></td>
+                <td>{{advertiser.name}}</td>
+                <td>{{advertiser.contacts}}</td>
+                <td>{{advertiser.industryLevel1}}</td>
+                <td>{{advertiser.industryLevel2}}</td>
+                <td>{{advertiser.website}}</td>
+                <td>{{advertiser.address}}</td>
+                <td>{{advertiser.checkStatus}}</td>
+                <td>{{advertiser.waxUid}}</td>
+                <td>{{advertiser.orgCode}}</td>
+                <td>{{advertiser.orgCodeCertificate}}</td>
+                <td>{{advertiser.businessLicense}}</td>
+                <td>{{advertiser.idCard}}</td>
+                <td>{{advertiser.icp}}</td>
+                <td>{{advertiser.taxesCertificate}}</td>
+                <td>{{advertiser.networkBussinessCertificate}}</td>
+                <td>{{advertiser.healthOrgCertificate}}</td>
+                <td>{{advertiser.healthAdFile}}</td>
+                <td>{{advertiser.gameAuthCertificate}}</td>
+                <td>{{advertiser.gameVersionFile}}</td>
+                <td>{{advertiser.celebrityEndorsement}}</td>
+                <td>{{advertiser.taxRegistration}}</td>
+                <td>{{advertiser.administrativ}}</td>
+                <td>{{advertiser.authorization}}</td>
+                <td>{{advertiser.remarks}}</td>
+                <td>{{advertiser.createDate | date:'medium'}}</td>
+                <td>{{advertiser.updateDate | date:'medium'}}</td>
+                <td>{{advertiser.createBy}}</td>
+                <td>{{advertiser.updateBy}}</td>
+                <td jhiTranslate="{{'gtMgrApp.DelFlag.' + advertiser.delFlag}}">{{advertiser.delFlag}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../advertiser-gt', advertiser.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'advertiser-gt/'+ advertiser.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'advertiser-gt/'+ advertiser.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="advertisers && advertisers.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

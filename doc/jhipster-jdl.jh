@@ -1,0 +1,63 @@
+enum DelFlag {
+	ON,OFF
+}
+enum Os{
+	IOS,ANDROID
+}
+enum ProductType{
+	APP_DOWNLOAD
+}
+entity Advertiser(t_advertiser){
+	name String required,/** 名称 */
+	contacts String required,/** 联系人 */
+    industryLevel1 String required,/** 广告主一级行业类型 */
+    industryLevel2 String required,/** 广告主二级行业类型 */
+    website String required,/** 公司网址 */
+    address String,/** 公司地址 */
+    checkStatus String,/** 审核状态 */
+    //详情字段
+    waxUid String,/** 微博uid */
+    orgCode String  ,/** 组织机构代码 */
+    orgCodeCertificate String  ,/** 组织机构代码证 */
+    businessLicense String  ,/** 营业执照 */
+    idCard String  ,/** 法人身份证 */
+    icp String  ,/** ICP备案 */
+    taxesCertificate String  ,/** 完税证 */
+    networkBussinessCertificate String  ,/** 网络文化经营许可证 */
+    healthOrgCertificate String  ,/** 医疗机构执业许可证 */
+    healthAdFile String  ,/** 医疗广告审查证明 */
+    gameAuthCertificate String  ,/** 游戏授权资质 */
+    gameVersionFile String  ,/** 游戏版号文件 */
+    celebrityEndorsement String  ,/** 明星代言资质 */
+    taxRegistration String  ,/** 税务登记证 */
+    administrativ String  ,/** 行政许可 */
+    authorization String  /** 名义授权 */
+    //通用字段
+    remarks String,/** 备注 */
+    createDate Instant,/** 创建时间 */
+    updateDate Instant,/** 创建时间 */
+    createBy Long,/** 创建者 */
+    updateBy Long,/** 更新者 */
+    delFlag DelFlag/** 删除标记 */
+}
+entity Product(t_product){
+	name String required,/** 产品名称 */
+    previewUrl String required,/** 预览链接 */
+    os Os required, /** 平台 */
+    type ProductType required,/** 产品类型*/
+    packetUrl String ,/** 包地址*/
+    //通用字段
+    remarks String,/** 备注 */
+    createDate Instant,/** 创建时间 */
+    updateDate Instant,/** 创建时间 */
+    createBy Long,/** 创建者 */
+    updateBy Long,/** 更新者 */
+    delFlag DelFlag/** 删除标记 */
+}
+
+paginate all with pagination
+//dto * with mapstruct
+// Set service options to all except few
+service all with serviceClass
+// Set an angular suffix
+angularSuffix * with gt

@@ -1,0 +1,206 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myAdvertiserLabel" jhiTranslate="gtMgrApp.advertiser.home.createOrEditLabel">Create or edit a Advertiser</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!advertiser.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="advertiser.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                [(ngModel)]="advertiser.name" required />
+            <div [hidden]="!(editForm.controls.name?.dirty && editForm.controls.name?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.name?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.contacts" for="field_contacts">Contacts</label>
+            <input type="text" class="form-control" name="contacts" id="field_contacts"
+                [(ngModel)]="advertiser.contacts" required />
+            <div [hidden]="!(editForm.controls.contacts?.dirty && editForm.controls.contacts?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.contacts?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.industryLevel1" for="field_industryLevel1">Industry Level 1</label>
+            <input type="text" class="form-control" name="industryLevel1" id="field_industryLevel1"
+                [(ngModel)]="advertiser.industryLevel1" required />
+            <div [hidden]="!(editForm.controls.industryLevel1?.dirty && editForm.controls.industryLevel1?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.industryLevel1?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.industryLevel2" for="field_industryLevel2">Industry Level 2</label>
+            <input type="text" class="form-control" name="industryLevel2" id="field_industryLevel2"
+                [(ngModel)]="advertiser.industryLevel2" required />
+            <div [hidden]="!(editForm.controls.industryLevel2?.dirty && editForm.controls.industryLevel2?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.industryLevel2?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.website" for="field_website">Website</label>
+            <input type="text" class="form-control" name="website" id="field_website"
+                [(ngModel)]="advertiser.website" required />
+            <div [hidden]="!(editForm.controls.website?.dirty && editForm.controls.website?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.website?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                [(ngModel)]="advertiser.address"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.checkStatus" for="field_checkStatus">Check Status</label>
+            <input type="text" class="form-control" name="checkStatus" id="field_checkStatus"
+                [(ngModel)]="advertiser.checkStatus"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.waxUid" for="field_waxUid">Wax Uid</label>
+            <input type="text" class="form-control" name="waxUid" id="field_waxUid"
+                [(ngModel)]="advertiser.waxUid"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.orgCode" for="field_orgCode">Org Code</label>
+            <input type="text" class="form-control" name="orgCode" id="field_orgCode"
+                [(ngModel)]="advertiser.orgCode"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.orgCodeCertificate" for="field_orgCodeCertificate">Org Code Certificate</label>
+            <input type="text" class="form-control" name="orgCodeCertificate" id="field_orgCodeCertificate"
+                [(ngModel)]="advertiser.orgCodeCertificate"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.businessLicense" for="field_businessLicense">Business License</label>
+            <input type="text" class="form-control" name="businessLicense" id="field_businessLicense"
+                [(ngModel)]="advertiser.businessLicense"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.idCard" for="field_idCard">Id Card</label>
+            <input type="text" class="form-control" name="idCard" id="field_idCard"
+                [(ngModel)]="advertiser.idCard"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.icp" for="field_icp">Icp</label>
+            <input type="text" class="form-control" name="icp" id="field_icp"
+                [(ngModel)]="advertiser.icp"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.taxesCertificate" for="field_taxesCertificate">Taxes Certificate</label>
+            <input type="text" class="form-control" name="taxesCertificate" id="field_taxesCertificate"
+                [(ngModel)]="advertiser.taxesCertificate"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.networkBussinessCertificate" for="field_networkBussinessCertificate">Network Bussiness Certificate</label>
+            <input type="text" class="form-control" name="networkBussinessCertificate" id="field_networkBussinessCertificate"
+                [(ngModel)]="advertiser.networkBussinessCertificate"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.healthOrgCertificate" for="field_healthOrgCertificate">Health Org Certificate</label>
+            <input type="text" class="form-control" name="healthOrgCertificate" id="field_healthOrgCertificate"
+                [(ngModel)]="advertiser.healthOrgCertificate"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.healthAdFile" for="field_healthAdFile">Health Ad File</label>
+            <input type="text" class="form-control" name="healthAdFile" id="field_healthAdFile"
+                [(ngModel)]="advertiser.healthAdFile"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.gameAuthCertificate" for="field_gameAuthCertificate">Game Auth Certificate</label>
+            <input type="text" class="form-control" name="gameAuthCertificate" id="field_gameAuthCertificate"
+                [(ngModel)]="advertiser.gameAuthCertificate"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.gameVersionFile" for="field_gameVersionFile">Game Version File</label>
+            <input type="text" class="form-control" name="gameVersionFile" id="field_gameVersionFile"
+                [(ngModel)]="advertiser.gameVersionFile"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.celebrityEndorsement" for="field_celebrityEndorsement">Celebrity Endorsement</label>
+            <input type="text" class="form-control" name="celebrityEndorsement" id="field_celebrityEndorsement"
+                [(ngModel)]="advertiser.celebrityEndorsement"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.taxRegistration" for="field_taxRegistration">Tax Registration</label>
+            <input type="text" class="form-control" name="taxRegistration" id="field_taxRegistration"
+                [(ngModel)]="advertiser.taxRegistration"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.administrativ" for="field_administrativ">Administrativ</label>
+            <input type="text" class="form-control" name="administrativ" id="field_administrativ"
+                [(ngModel)]="advertiser.administrativ"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.authorization" for="field_authorization">Authorization</label>
+            <input type="text" class="form-control" name="authorization" id="field_authorization"
+                [(ngModel)]="advertiser.authorization"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.remarks" for="field_remarks">Remarks</label>
+            <input type="text" class="form-control" name="remarks" id="field_remarks"
+                [(ngModel)]="advertiser.remarks"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.createDate" for="field_createDate">Create Date</label>
+            <div class="d-flex">
+                <input id="field_createDate" type="datetime-local" class="form-control" name="createDate" [(ngModel)]="advertiser.createDate"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.updateDate" for="field_updateDate">Update Date</label>
+            <div class="d-flex">
+                <input id="field_updateDate" type="datetime-local" class="form-control" name="updateDate" [(ngModel)]="advertiser.updateDate"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.createBy" for="field_createBy">Create By</label>
+            <input type="number" class="form-control" name="createBy" id="field_createBy"
+                [(ngModel)]="advertiser.createBy"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.updateBy" for="field_updateBy">Update By</label>
+            <input type="number" class="form-control" name="updateBy" id="field_updateBy"
+                [(ngModel)]="advertiser.updateBy"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gtMgrApp.advertiser.delFlag" for="field_delFlag">Del Flag</label>
+            <select class="form-control" name="delFlag" [(ngModel)]="advertiser.delFlag" id="field_delFlag" >
+                <option value="ON">{{'gtMgrApp.DelFlag.ON' | translate}}</option>
+                <option value="OFF">{{'gtMgrApp.DelFlag.OFF' | translate}}</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

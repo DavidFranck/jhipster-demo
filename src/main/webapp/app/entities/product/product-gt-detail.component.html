@@ -1,0 +1,65 @@
+
+<div *ngIf="product">
+    <h2><span jhiTranslate="gtMgrApp.product.detail.title">Product</span> {{product.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gtMgrApp.product.name">Name</span></dt>
+        <dd>
+            <span>{{product.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.previewUrl">Preview Url</span></dt>
+        <dd>
+            <span>{{product.previewUrl}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.os">Os</span></dt>
+        <dd>
+            <span jhiTranslate="{{'gtMgrApp.Os.' + product.os}}">{{product.os}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.type">Type</span></dt>
+        <dd>
+            <span jhiTranslate="{{'gtMgrApp.ProductType.' + product.type}}">{{product.type}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.packetUrl">Packet Url</span></dt>
+        <dd>
+            <span>{{product.packetUrl}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.remarks">Remarks</span></dt>
+        <dd>
+            <span>{{product.remarks}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{product.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.updateDate">Update Date</span></dt>
+        <dd>
+            <span>{{product.updateDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.createBy">Create By</span></dt>
+        <dd>
+            <span>{{product.createBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{product.updateBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="gtMgrApp.product.delFlag">Del Flag</span></dt>
+        <dd>
+            <span jhiTranslate="{{'gtMgrApp.DelFlag.' + product.delFlag}}">{{product.delFlag}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'product-gt/'+ product.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
