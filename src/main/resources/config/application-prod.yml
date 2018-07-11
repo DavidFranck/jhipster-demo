@@ -134,3 +134,10 @@ jhipster:
 # ===================================================================
 
 application:
+    oss:
+        domain: http://res.ad-mex.com/
+        endpoint: http://oss-cn-beijing.aliyuncs.com
+        accessKeyId: LTAIGxdrA6p2yz8N
+        accessKeySecret: eTgIKy10kNm4OIIWFkp5Xv14Rt8y1N
+        bucketName: mexdsp
+        prefix: gt-prod

@@ -1,5 +1,6 @@
 package com.mex.gt.mgr;
 
+import com.mex.gt.mgr.common.utils.OSSUtils;
 import com.mex.gt.mgr.config.ApplicationProperties;
 import com.mex.gt.mgr.config.DefaultProfileUtil;
 

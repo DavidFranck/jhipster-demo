@@ -16,6 +16,10 @@
     <name>Golden Traffic</name>
 
     <properties>
+        <!--custom-->
+        <aliyun.oss.version>2.5.0</aliyun.oss.version>
+        <guava.version>18.0</guava.version>
+        <!--origin-->
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
         <assertj.version>3.6.2</assertj.version>
         <awaitility.version>2.0.0</awaitility.version>
@@ -96,6 +100,20 @@
 
 
     <dependencies>
+        <!--custom-->
+        <!--oss-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>${aliyun.oss.version}</version>
+        </dependency>
+        <!-- google java lib -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <!--origin-->
         <dependency>
             <groupId>io.github.jhipster</groupId>
             <artifactId>jhipster</artifactId>
