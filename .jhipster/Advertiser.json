@@ -4,6 +4,7 @@
     "fields": [
         {
             "fieldName": "name",
+            "javadoc": "广告主名称",
             "fieldType": "String",
             "fieldValidateRules": [
                 "required"
@@ -11,14 +12,6 @@
         },
         {
             "fieldName": "contacts",
-            "javadoc": "名称",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "industryLevel1",
             "javadoc": "联系人",
             "fieldType": "String",
             "fieldValidateRules": [
@@ -26,7 +19,7 @@
             ]
         },
         {
-            "fieldName": "industryLevel2",
+            "fieldName": "industryLevel1",
             "javadoc": "广告主一级行业类型",
             "fieldType": "String",
             "fieldValidateRules": [
@@ -34,7 +27,7 @@
             ]
         },
         {
-            "fieldName": "website",
+            "fieldName": "industryLevel2",
             "javadoc": "广告主二级行业类型",
             "fieldType": "String",
             "fieldValidateRules": [
@@ -42,102 +35,111 @@
             ]
         },
         {
-            "fieldName": "address",
+            "fieldName": "website",
             "javadoc": "公司网址",
-            "fieldType": "String"
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
         },
         {
-            "fieldName": "checkStatus",
+            "fieldName": "address",
             "javadoc": "公司地址",
             "fieldType": "String"
         },
         {
-            "fieldName": "waxUid",
+            "fieldName": "checkStatus",
             "javadoc": "审核状态",
             "fieldType": "String"
         },
         {
-            "fieldName": "orgCode",
+            "fieldName": "waxUid",
             "javadoc": "微博uid",
             "fieldType": "String"
         },
         {
-            "fieldName": "orgCodeCertificate",
+            "fieldName": "orgCode",
             "javadoc": "组织机构代码",
             "fieldType": "String"
         },
         {
-            "fieldName": "businessLicense",
+            "fieldName": "orgCodeCertificate",
             "javadoc": "组织机构代码证",
             "fieldType": "String"
         },
         {
-            "fieldName": "idCard",
+            "fieldName": "businessLicense",
             "javadoc": "营业执照",
             "fieldType": "String"
         },
         {
-            "fieldName": "icp",
+            "fieldName": "idCard",
             "javadoc": "法人身份证",
             "fieldType": "String"
         },
         {
-            "fieldName": "taxesCertificate",
+            "fieldName": "icp",
             "javadoc": "ICP备案",
             "fieldType": "String"
         },
         {
-            "fieldName": "networkBussinessCertificate",
+            "fieldName": "taxesCertificate",
             "javadoc": "完税证",
             "fieldType": "String"
         },
         {
-            "fieldName": "healthOrgCertificate",
+            "fieldName": "networkBussinessCertificate",
             "javadoc": "网络文化经营许可证",
             "fieldType": "String"
         },
         {
-            "fieldName": "healthAdFile",
+            "fieldName": "healthOrgCertificate",
             "javadoc": "医疗机构执业许可证",
             "fieldType": "String"
         },
         {
-            "fieldName": "gameAuthCertificate",
+            "fieldName": "healthAdFile",
             "javadoc": "医疗广告审查证明",
             "fieldType": "String"
         },
         {
-            "fieldName": "gameVersionFile",
+            "fieldName": "gameAuthCertificate",
             "javadoc": "游戏授权资质",
             "fieldType": "String"
         },
         {
-            "fieldName": "celebrityEndorsement",
+            "fieldName": "gameVersionFile",
             "javadoc": "游戏版号文件",
             "fieldType": "String"
         },
         {
-            "fieldName": "taxRegistration",
+            "fieldName": "celebrityEndorsement",
             "javadoc": "明星代言资质",
             "fieldType": "String"
         },
         {
-            "fieldName": "administrativ",
+            "fieldName": "taxRegistration",
             "javadoc": "税务登记证",
             "fieldType": "String"
         },
         {
-            "fieldName": "authorization",
+            "fieldName": "administrativ",
             "javadoc": "行政许可",
             "fieldType": "String"
         },
         {
+            "fieldName": "authorization",
+            "javadoc": "名义授权",
+            "fieldType": "String"
+        },
+        {
             "fieldName": "remarks",
+            "javadoc": "备注",
             "fieldType": "String"
         },
         {
             "fieldName": "createDate",
-            "javadoc": "备注",
+            "javadoc": "创建时间",
             "fieldType": "Instant"
         },
         {
@@ -147,17 +149,17 @@
         },
         {
             "fieldName": "createBy",
-            "javadoc": "创建时间",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "updateBy",
             "javadoc": "创建者",
             "fieldType": "Long"
         },
         {
-            "fieldName": "delFlag",
+            "fieldName": "updateBy",
             "javadoc": "更新者",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "delFlag",
+            "javadoc": "删除标记",
             "fieldType": "DelFlag",
             "fieldValues": "ON,OFF"
         }

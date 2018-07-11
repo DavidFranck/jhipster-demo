@@ -30,26 +30,21 @@ public class Product implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @Column(name = "name", nullable = false)
-    private String name;
-
     /**
      * 产品名称
      */
     @NotNull
     @ApiModelProperty(value = "产品名称", required = true)
-    @Column(name = "preview_url", nullable = false)
-    private String previewUrl;
+    @Column(name = "name", nullable = false)
+    private String name;
 
     /**
      * 预览链接
      */
     @NotNull
     @ApiModelProperty(value = "预览链接", required = true)
-    @Enumerated(EnumType.STRING)
-    @Column(name = "os", nullable = false)
-    private Os os;
+    @Column(name = "preview_url", nullable = false)
+    private String previewUrl;
 
     /**
      * 平台
@@ -57,27 +52,36 @@ public class Product implements Serializable {
     @NotNull
     @ApiModelProperty(value = "平台", required = true)
     @Enumerated(EnumType.STRING)
-    @Column(name = "jhi_type", nullable = false)
-    private ProductType type;
+    @Column(name = "os", nullable = false)
+    private Os os;
 
     /**
      * 产品类型
      */
-    @ApiModelProperty(value = "产品类型")
-    @Column(name = "packet_url")
-    private String packetUrl;
+    @NotNull
+    @ApiModelProperty(value = "产品类型", required = true)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "jhi_type", nullable = false)
+    private ProductType type;
 
     /**
      * 包地址
      */
     @ApiModelProperty(value = "包地址")
-    @Column(name = "remarks")
-    private String remarks;
+    @Column(name = "packet_url")
+    private String packetUrl;
 
     /**
      * 备注
      */
     @ApiModelProperty(value = "备注")
+    @Column(name = "remarks")
+    private String remarks;
+
+    /**
+     * 创建时间
+     */
+    @ApiModelProperty(value = "创建时间")
     @Column(name = "create_date")
     private Instant createDate;
 
@@ -89,23 +93,23 @@ public class Product implements Serializable {
     private Instant updateDate;
 
     /**
-     * 创建时间
-     */
-    @ApiModelProperty(value = "创建时间")
-    @Column(name = "create_by")
-    private Long createBy;
-
-    /**
      * 创建者
      */
     @ApiModelProperty(value = "创建者")
-    @Column(name = "update_by")
-    private Long updateBy;
+    @Column(name = "create_by")
+    private Long createBy;
 
     /**
      * 更新者
      */
     @ApiModelProperty(value = "更新者")
+    @Column(name = "update_by")
+    private Long updateBy;
+
+    /**
+     * 删除标记
+     */
+    @ApiModelProperty(value = "删除标记")
     @Enumerated(EnumType.STRING)
     @Column(name = "del_flag")
     private DelFlag delFlag;

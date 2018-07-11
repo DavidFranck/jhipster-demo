@@ -4,13 +4,6 @@
     "fields": [
         {
             "fieldName": "name",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "previewUrl",
             "javadoc": "产品名称",
             "fieldType": "String",
             "fieldValidateRules": [
@@ -18,8 +11,16 @@
             ]
         },
         {
-            "fieldName": "os",
+            "fieldName": "previewUrl",
             "javadoc": "预览链接",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "os",
+            "javadoc": "平台",
             "fieldType": "Os",
             "fieldValues": "IOS,ANDROID",
             "fieldValidateRules": [
@@ -28,7 +29,7 @@
         },
         {
             "fieldName": "type",
-            "javadoc": "平台",
+            "javadoc": "产品类型",
             "fieldType": "ProductType",
             "fieldValues": "APP_DOWNLOAD",
             "fieldValidateRules": [
@@ -37,17 +38,17 @@
         },
         {
             "fieldName": "packetUrl",
-            "javadoc": "产品类型",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "remarks",
             "javadoc": "包地址",
             "fieldType": "String"
         },
         {
-            "fieldName": "createDate",
+            "fieldName": "remarks",
             "javadoc": "备注",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createDate",
+            "javadoc": "创建时间",
             "fieldType": "Instant"
         },
         {
@@ -57,17 +58,17 @@
         },
         {
             "fieldName": "createBy",
-            "javadoc": "创建时间",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "updateBy",
             "javadoc": "创建者",
             "fieldType": "Long"
         },
         {
-            "fieldName": "delFlag",
+            "fieldName": "updateBy",
             "javadoc": "更新者",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "delFlag",
+            "javadoc": "删除标记",
             "fieldType": "DelFlag",
             "fieldValues": "ON,OFF"
         }

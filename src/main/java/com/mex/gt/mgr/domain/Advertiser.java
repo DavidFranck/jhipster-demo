@@ -26,175 +26,183 @@ public class Advertiser implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @Column(name = "name", nullable = false)
-    private String name;
-
     /**
-     * 名称
+     * 广告主名称
      */
     @NotNull
-    @ApiModelProperty(value = "名称", required = true)
-    @Column(name = "contacts", nullable = false)
-    private String contacts;
+    @ApiModelProperty(value = "广告主名称", required = true)
+    @Column(name = "name", nullable = false)
+    private String name;
 
     /**
      * 联系人
      */
     @NotNull
     @ApiModelProperty(value = "联系人", required = true)
-    @Column(name = "industry_level_1", nullable = false)
-    private String industryLevel1;
+    @Column(name = "contacts", nullable = false)
+    private String contacts;
 
     /**
      * 广告主一级行业类型
      */
     @NotNull
     @ApiModelProperty(value = "广告主一级行业类型", required = true)
-    @Column(name = "industry_level_2", nullable = false)
-    private String industryLevel2;
+    @Column(name = "industry_level_1", nullable = false)
+    private String industryLevel1;
 
     /**
      * 广告主二级行业类型
      */
     @NotNull
     @ApiModelProperty(value = "广告主二级行业类型", required = true)
-    @Column(name = "website", nullable = false)
-    private String website;
+    @Column(name = "industry_level_2", nullable = false)
+    private String industryLevel2;
 
     /**
      * 公司网址
      */
-    @ApiModelProperty(value = "公司网址")
-    @Column(name = "address")
-    private String address;
+    @NotNull
+    @ApiModelProperty(value = "公司网址", required = true)
+    @Column(name = "website", nullable = false)
+    private String website;
 
     /**
      * 公司地址
      */
     @ApiModelProperty(value = "公司地址")
-    @Column(name = "check_status")
-    private String checkStatus;
+    @Column(name = "address")
+    private String address;
 
     /**
      * 审核状态
      */
     @ApiModelProperty(value = "审核状态")
-    @Column(name = "wax_uid")
-    private String waxUid;
+    @Column(name = "check_status")
+    private String checkStatus;
 
     /**
      * 微博uid
      */
     @ApiModelProperty(value = "微博uid")
-    @Column(name = "org_code")
-    private String orgCode;
+    @Column(name = "wax_uid")
+    private String waxUid;
 
     /**
      * 组织机构代码
      */
     @ApiModelProperty(value = "组织机构代码")
-    @Column(name = "org_code_certificate")
-    private String orgCodeCertificate;
+    @Column(name = "org_code")
+    private String orgCode;
 
     /**
      * 组织机构代码证
      */
     @ApiModelProperty(value = "组织机构代码证")
-    @Column(name = "business_license")
-    private String businessLicense;
+    @Column(name = "org_code_certificate")
+    private String orgCodeCertificate;
 
     /**
      * 营业执照
      */
     @ApiModelProperty(value = "营业执照")
-    @Column(name = "id_card")
-    private String idCard;
+    @Column(name = "business_license")
+    private String businessLicense;
 
     /**
      * 法人身份证
      */
     @ApiModelProperty(value = "法人身份证")
-    @Column(name = "icp")
-    private String icp;
+    @Column(name = "id_card")
+    private String idCard;
 
     /**
      * ICP备案
      */
     @ApiModelProperty(value = "ICP备案")
-    @Column(name = "taxes_certificate")
-    private String taxesCertificate;
+    @Column(name = "icp")
+    private String icp;
 
     /**
      * 完税证
      */
     @ApiModelProperty(value = "完税证")
-    @Column(name = "network_bussiness_certificate")
-    private String networkBussinessCertificate;
+    @Column(name = "taxes_certificate")
+    private String taxesCertificate;
 
     /**
      * 网络文化经营许可证
      */
     @ApiModelProperty(value = "网络文化经营许可证")
-    @Column(name = "health_org_certificate")
-    private String healthOrgCertificate;
+    @Column(name = "network_bussiness_certificate")
+    private String networkBussinessCertificate;
 
     /**
      * 医疗机构执业许可证
      */
     @ApiModelProperty(value = "医疗机构执业许可证")
-    @Column(name = "health_ad_file")
-    private String healthAdFile;
+    @Column(name = "health_org_certificate")
+    private String healthOrgCertificate;
 
     /**
      * 医疗广告审查证明
      */
     @ApiModelProperty(value = "医疗广告审查证明")
-    @Column(name = "game_auth_certificate")
-    private String gameAuthCertificate;
+    @Column(name = "health_ad_file")
+    private String healthAdFile;
 
     /**
      * 游戏授权资质
      */
     @ApiModelProperty(value = "游戏授权资质")
-    @Column(name = "game_version_file")
-    private String gameVersionFile;
+    @Column(name = "game_auth_certificate")
+    private String gameAuthCertificate;
 
     /**
      * 游戏版号文件
      */
     @ApiModelProperty(value = "游戏版号文件")
-    @Column(name = "celebrity_endorsement")
-    private String celebrityEndorsement;
+    @Column(name = "game_version_file")
+    private String gameVersionFile;
 
     /**
      * 明星代言资质
      */
     @ApiModelProperty(value = "明星代言资质")
-    @Column(name = "tax_registration")
-    private String taxRegistration;
+    @Column(name = "celebrity_endorsement")
+    private String celebrityEndorsement;
 
     /**
      * 税务登记证
      */
     @ApiModelProperty(value = "税务登记证")
-    @Column(name = "administrativ")
-    private String administrativ;
+    @Column(name = "tax_registration")
+    private String taxRegistration;
 
     /**
      * 行政许可
      */
     @ApiModelProperty(value = "行政许可")
+    @Column(name = "administrativ")
+    private String administrativ;
+
+    /**
+     * 名义授权
+     */
+    @ApiModelProperty(value = "名义授权")
     @Column(name = "jhi_authorization")
     private String authorization;
-
-    @Column(name = "remarks")
-    private String remarks;
 
     /**
      * 备注
      */
     @ApiModelProperty(value = "备注")
+    @Column(name = "remarks")
+    private String remarks;
+
+    /**
+     * 创建时间
+     */
+    @ApiModelProperty(value = "创建时间")
     @Column(name = "create_date")
     private Instant createDate;
 
@@ -206,23 +214,23 @@ public class Advertiser implements Serializable {
     private Instant updateDate;
 
     /**
-     * 创建时间
-     */
-    @ApiModelProperty(value = "创建时间")
-    @Column(name = "create_by")
-    private Long createBy;
-
-    /**
      * 创建者
      */
     @ApiModelProperty(value = "创建者")
-    @Column(name = "update_by")
-    private Long updateBy;
+    @Column(name = "create_by")
+    private Long createBy;
 
     /**
      * 更新者
      */
     @ApiModelProperty(value = "更新者")
+    @Column(name = "update_by")
+    private Long updateBy;
+
+    /**
+     * 删除标记
+     */
+    @ApiModelProperty(value = "删除标记")
     @Enumerated(EnumType.STRING)
     @Column(name = "del_flag")
     private DelFlag delFlag;
